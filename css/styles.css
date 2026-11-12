@@ -1177,7 +1177,10 @@ kbd {
   .order[open] { display: flex; flex-direction: column; }
   .order__media, .order__body { flex-shrink: 0; }
   .order__media { min-height: 0; aspect-ratio: 16 / 9; border-right: 0; border-bottom: 1px solid var(--line); }
-  .order__media img { height: 100%; object-fit: contain; padding: 4% 12%; }
+  /* the photo is pinned inside the 16:9 box, so tall products (mice, headsets) shrink to fit
+     instead of spilling over the text below */
+  .order__media { position: relative; }
+  .order__media img { position: absolute; inset: 0; width: 100%; height: 100%; max-height: none; object-fit: contain; padding: 4% 12%; }
 }
 
 @media (max-width: 760px) {
