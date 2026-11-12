@@ -35,7 +35,7 @@ Copy any block in `PRODUCTS` inside `js/products.js` and change the fields:
 {
   id: "my-new-mouse",              // unique, lowercase-with-dashes
   name: "My New Mouse",
-  category: "mice",                // keyboards | mice | mousepads | audio | accessories
+  category: "mouse",                // keyboards | mouse | mousepads | audio | accessories
   tagline: "Short one-liner",
   description: "One or two sentences shown in the order window.",
   price: 39,                       // or null → shows "Ask for price"

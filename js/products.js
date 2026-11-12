@@ -38,8 +38,8 @@ const CATEGORIES = [
     image: "assets/products/rog-azoth.webp",
   },
   {
-    id: "mice",
-    name: "Mice",
+    id: "mouse",
+    name: "Mouse",
     blurb: "Light shells. Flawless sensors.",
     image: "assets/products/akko-dash-v9.webp",
   },
@@ -124,11 +124,11 @@ const PRODUCTS = [
     featured: false,
   },
 
-  // ---------------- Mice ----------------
+  // ---------------- Mouse ----------------
   {
     id: "akko-dash-v9",
     name: "AKKO Dash V9 Ultra",
-    category: "mice",
+    category: "mouse",
     tagline: "40 g, PAW3950 sensor, 8K polling",
     description:
       "An ultralight 40 g wireless mouse with the flagship PAW3950 sensor (up to 42,000 DPI) and 8K polling. Use it on 2.4 GHz, Bluetooth or wired, with up to 200 hours of battery.",
@@ -142,7 +142,7 @@ const PRODUCTS = [
   {
     id: "aula-sc620",
     name: "AULA SC620",
-    category: "mice",
+    category: "mouse",
     tagline: "67 g tri-mode, RGB open shell",
     description:
       "A 67 g open-shell wireless mouse with a PAW3311 sensor (up to 12,000 DPI), 7 programmable buttons and RGB glowing through the frame. 2.4 GHz, Bluetooth or USB-C.",

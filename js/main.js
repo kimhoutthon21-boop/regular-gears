@@ -707,6 +707,7 @@
     let shelfImg = null; // the image left on the shelf while its product is "picked up"
     let busy = false;
 
+
     const message = () => {
       if (!product.inStock) {
         const was = hasPrice(product) ? ` (${money(product.price)})` : "";
@@ -875,46 +876,28 @@
     }, { passive: true });
   }
 
-  /* ---------- Marquee: seamless infinite loop ---------------------------- */
-  // Builds two identical groups, each at least as wide as the screen, then slides the track by
-  // exactly one group. When the animation restarts, group 2 is where group 1 started: no seam.
+  /* ---------- Marquee: React Bits "Curved Loop" (js/curved-loop.js) ------ */
+  // Settings from reactbits.dev: line shape, outline preset, ✦ separator, no scroll boost
   function initMarquee() {
-    const track = $(".marquee__track");
-    if (!track) return;
-    const SPEED = 45; // px per second, the same on every screen size
-    const items = [...track.children].map((el) => el.cloneNode(true));
-
-    const build = () => {
-      track.classList.remove("is-looping");
-      track.textContent = "";
-      const group = document.createElement("div");
-      group.className = "marquee__group";
-      track.appendChild(group);
-      const minWidth = window.innerWidth + 200;
-      // Repeat the item set until one group is wider than the viewport (cap avoids runaway loops)
-      for (let i = 0; i < 20 && (i === 0 || group.scrollWidth < minWidth); i++) {
-        items.forEach((el) => group.appendChild(el.cloneNode(true)));
-      }
-      // Whole-pixel group width, so the -50% jump lands exactly on a pixel (no sub-pixel shimmer)
-      const groupWidth = Math.ceil(group.getBoundingClientRect().width);
-      group.style.width = `${groupWidth}px`;
-      track.appendChild(group.cloneNode(true));
-      track.style.setProperty("--marquee-dur", `${(groupWidth / SPEED).toFixed(2)}s`);
-      void track.offsetWidth; // restart the animation cleanly with the new width
-      track.classList.add("is-looping");
-    };
-
-    let lastWidth = window.innerWidth;
-    let t;
-    window.addEventListener("resize", () => {
-      if (window.innerWidth === lastWidth) return; // ignore mobile URL-bar height changes
-      lastWidth = window.innerWidth;
-      clearTimeout(t);
-      t = setTimeout(build, 200);
+    const box = $(".marquee");
+    if (!box || !window.CurvedLoop) return;
+    const phrases = [...box.querySelectorAll(".marquee__items li")].map((li) => li.textContent.trim());
+    CurvedLoop.create(box, {
+      marqueeText: phrases,
+      shape: "line",
+      outline: true,
+      color: "#ffffff",
+      separator: "✦",
+      separatorColor: "#dc143c", // site crimson (--accent-mark)
+      speed: 1,
+      scrollBoost: 0, // no speed-up while scrolling
+      fixedPx: true, // sizes below are real pixels, same on phone and desktop
+      fontSize: 18,
+      fontWeight: 800,
+      letterSpacing: 2,
+      strokeWidth: 2,
+      edgeFade: 0.4,
     });
-    // Measure after web fonts load, since the font changes how wide the text is
-    (document.fonts ? document.fonts.ready : Promise.resolve()).then(build);
-    build();
   }
 
   /* ---------- Hero background: Topography terrain ------------------------ */

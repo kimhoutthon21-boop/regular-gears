@@ -552,29 +552,20 @@ kbd {
 .stage__callouts li:nth-child(3) { animation-delay: -3s; }
 .stage__callouts li:nth-child(4) { animation-delay: -4.5s; }
 
-/* 7. Marquee --------------------------------------------------------------- */
+/* 7. Marquee (React Bits "Curved Loop", built by js/curved-loop.js) -------- */
 .marquee {
   border-block: 1px solid var(--line);
   overflow: hidden;
-  padding: 18px 0;
+  padding: 10px 0;
   background: var(--bg-2);
-  mask-image: linear-gradient(90deg, transparent, #000 10%, #000 90%, transparent);
-  -webkit-mask-image: linear-gradient(90deg, transparent, #000 10%, #000 90%, transparent);
 }
-/* JS fills the track with two identical groups, each wider than the screen, and slides it by
-   exactly one group (-50%). Spacing is margin-right on every item (not `gap`), so both halves
-   are pixel-identical and the loop has no visible seam. */
-.marquee__track {
-  display: flex; width: max-content;
-  font-family: var(--font-mono); font-size: 0.82rem; letter-spacing: 0.1em; text-transform: uppercase;
-  color: var(--muted);
-  will-change: transform;
+.marquee__items { display: none; } /* source list only; the SVG strip is what shows */
+.curved-loop-jacket { width: 100%; }
+.curved-loop-svg {
+  display: block; width: 100%; aspect-ratio: 100 / 12; overflow: visible;
+  font-family: var(--font-display); font-stretch: 110%; line-height: 1;
+  user-select: none; -webkit-user-select: none;
 }
-.marquee__track.is-looping { animation: marquee var(--marquee-dur, 40s) linear infinite; }
-.marquee__group { display: flex; align-items: center; flex: none; }
-.marquee__group > * { flex: none; margin-right: 32px; white-space: nowrap; }
-.marquee__track i { width: 6px; height: 6px; background: var(--accent-mark); transform: rotate(45deg); }
-.marquee:hover .marquee__track { animation-play-state: paused; }
 
 /* 8. Categories (bento) ---------------------------------------------------- */
 .cat-grid {
@@ -886,7 +877,11 @@ kbd {
 .why:hover::before { width: 100%; }
 .why__num { font-family: var(--font-mono); font-size: 0.75rem; color: var(--dim); }
 .why__icon { width: 52px; height: 52px; margin: 36px 0 28px; color: var(--text); transition: transform 0.6s var(--ease-out); }
-.why:hover .why__icon { transform: translateY(-4px) rotate(-4deg); }
+.why:hover .why__icon { transform: translateY(-4px) rotate(-4deg); color: var(--accent-mark); }
+.why__icon svg { display: block; width: 100%; height: 100%; }
+.why__icon { transition: transform 0.6s var(--ease-out), color 0.3s; }
+.footer__credit { font-size: 0.75rem; color: var(--dim); }
+.footer__credit a:hover { color: var(--text); }
 .why h3 { font-family: var(--font-display); font-stretch: 108%; font-weight: 700; font-size: 1.3rem; letter-spacing: -0.02em; line-height: 1.2; }
 .why p { color: var(--muted); font-size: 0.95rem; margin-top: 12px; }
 
@@ -1141,7 +1136,6 @@ kbd {
 @keyframes pulse { 0%, 100% { box-shadow: 0 0 0 4px rgba(220, 20, 60, 0.21); } 50% { box-shadow: 0 0 0 8px rgba(220, 20, 60, 0.0); } }
 @keyframes blink { 50% { opacity: 0; } }
 @keyframes float { 0%, 100% { transform: translate(-50%, -50%); } 50% { transform: translate(-50%, calc(-50% - 8px)); } }
-@keyframes marquee { to { transform: translateX(-50%); } }
 @keyframes spin { to { transform: rotate(360deg); } }
 @keyframes fadeIn { from { opacity: 0; } }
 @keyframes popIn { from { opacity: 0; transform: translateY(16px) scale(0.98); } }
@@ -1179,7 +1173,9 @@ kbd {
   .about { grid-template-columns: 1fr; }
   .about__visual { max-width: 360px; margin-inline: auto; }
 
-  .order[open] { grid-template-columns: 1fr; }
+  /* stacked: a flex column whose parts never shrink, so a short screen scrolls the dialog instead of squashing the photo under the text */
+  .order[open] { display: flex; flex-direction: column; }
+  .order__media, .order__body { flex-shrink: 0; }
   .order__media { min-height: 0; aspect-ratio: 16 / 9; border-right: 0; border-bottom: 1px solid var(--line); }
   .order__media img { height: 100%; object-fit: contain; padding: 4% 12%; }
 }
