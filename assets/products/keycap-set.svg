@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="86 120 447 260" fill="none">
+  <defs>
+    <filter id="sh" x="-40%" y="-40%" width="180%" height="180%"><feGaussianBlur stdDeviation="12"/></filter>
+    <!-- One isometric keycap: base diamond, tapered top. Colours set via CSS vars on each <use>. -->
+    <g id="cap">
+      <ellipse cx="0" cy="40" rx="62" ry="22" fill="#000" opacity=".55" filter="url(#sh)"/>
+      <path d="M-62 0L0 34V-6L-48 -30Z" style="fill:var(--l)"/>
+      <path d="M0 34L62 0L48 -30L0 -6Z" style="fill:var(--r)"/>
+      <path d="M-48 -30L0 -56L48 -30L0 -6Z" style="fill:var(--t)"/>
+      <ellipse cx="0" cy="-31" rx="30" ry="15" fill="#000" opacity=".08"/>
+    </g>
+  </defs>
+  <use href="#cap" transform="translate(220 200)" style="--l:#c9c9c4;--r:#e4e4df;--t:#f7f7f4"/>
+  <use href="#cap" transform="translate(400 190)" style="--l:#1a1a1d;--r:#26262a;--t:#34343a"/>
+  <use href="#cap" transform="translate(310 300)" style="--l:#6b0818;--r:#a00d26;--t:#d0143a"/>
+  <use href="#cap" transform="translate(470 320) scale(.8)" style="--l:#c9c9c4;--r:#e4e4df;--t:#f7f7f4"/>
+  <use href="#cap" transform="translate(150 320) scale(.8)" style="--l:#1a1a1d;--r:#26262a;--t:#34343a"/>
+</svg>

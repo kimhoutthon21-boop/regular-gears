@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="136 68 368 368" fill="none">
+  <defs>
+    <linearGradient id="cup" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#3a3a40"/><stop offset="1" stop-color="#121214"/>
+    </linearGradient>
+    <linearGradient id="band" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#46464c"/><stop offset="1" stop-color="#1a1a1d"/>
+    </linearGradient>
+    <filter id="sh" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="16"/></filter>
+  </defs>
+  <ellipse cx="320" cy="404" rx="170" ry="18" fill="#000" opacity=".55" filter="url(#sh)"/>
+  <path d="M196 268C196 150 250 82 320 82C390 82 444 150 444 268" stroke="url(#band)" stroke-width="24" stroke-linecap="round"/>
+  <path d="M214 250C214 160 258 106 320 106C382 106 426 160 426 250" stroke="#0e0e10" stroke-width="10" stroke-linecap="round" opacity=".8"/>
+  <rect x="186" y="228" width="22" height="64" rx="8" fill="#2a2a2e"/>
+  <rect x="432" y="228" width="22" height="64" rx="8" fill="#2a2a2e"/>
+  <rect x="150" y="246" width="78" height="150" rx="36" fill="url(#cup)"/>
+  <rect x="412" y="246" width="78" height="150" rx="36" fill="url(#cup)"/>
+  <rect x="210" y="262" width="26" height="118" rx="13" fill="#0b0b0c"/>
+  <rect x="404" y="262" width="26" height="118" rx="13" fill="#0b0b0c"/>
+  <rect x="150.75" y="246.75" width="76.5" height="148.5" rx="35.25" stroke="#5a5a60" stroke-width="1.5"/>
+  <rect x="412.75" y="246.75" width="76.5" height="148.5" rx="35.25" stroke="#5a5a60" stroke-width="1.5"/>
+  <circle cx="189" cy="321" r="16" stroke="#d0143a" stroke-width="3"/>
+  <circle cx="451" cy="321" r="16" stroke="#d0143a" stroke-width="3"/>
+  <path d="M168 372C150 410 190 430 236 420" stroke="#2a2a2e" stroke-width="7" stroke-linecap="round"/>
+  <circle cx="240" cy="419" r="7" fill="#d0143a"/>
+</svg>

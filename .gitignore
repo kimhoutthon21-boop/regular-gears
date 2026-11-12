@@ -1,0 +1,9 @@
+# Original product photos (the site uses the cleaned copies in assets/products)
+products_photos/
+
+# OS / editor junk
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+node_modules/

@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="172 47 311 404" fill="none">
+  <defs>
+    <linearGradient id="shell" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffffff"/><stop offset=".55" stop-color="#ececea"/><stop offset="1" stop-color="#c9c9c4"/>
+    </linearGradient>
+    <radialGradient id="hi" cx=".35" cy=".25" r=".5">
+      <stop offset="0" stop-color="#fff" stop-opacity=".9"/><stop offset="1" stop-color="#fff" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="sh" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="16"/></filter>
+  </defs>
+  <g transform="rotate(-14 320 240)">
+    <ellipse cx="332" cy="262" rx="96" ry="160" fill="#000" opacity=".5" filter="url(#sh)"/>
+    <path d="M320 82C394 82 414 146 414 220V300C414 362 377 398 320 398C263 398 226 362 226 300V220C226 146 246 82 320 82Z" fill="url(#shell)"/>
+    <path d="M320 82C394 82 414 146 414 220V300C414 362 377 398 320 398C263 398 226 362 226 300V220C226 146 246 82 320 82Z" fill="url(#hi)"/>
+    <path d="M228 206Q320 226 412 206" stroke="#b9b9b4" stroke-width="2"/>
+    <path d="M320 84V214" stroke="#b9b9b4" stroke-width="2"/>
+    <rect x="311" y="118" width="18" height="50" rx="9" fill="#2a2a2e"/>
+    <rect x="315" y="124" width="10" height="38" rx="5" fill="#d0143a"/>
+    <rect x="221" y="214" width="8" height="34" rx="4" fill="#d4d4cf"/>
+    <rect x="221" y="252" width="8" height="34" rx="4" fill="#d4d4cf"/>
+    <circle cx="320" cy="350" r="5" fill="#d0143a"/>
+  </g>
+</svg>

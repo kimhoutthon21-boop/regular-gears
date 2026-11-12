@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="100 92 440 358" fill="none">
+  <defs>
+    <linearGradient id="shell" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#4a4a52"/><stop offset="1" stop-color="#121214"/>
+    </linearGradient>
+    <radialGradient id="face" cx=".4" cy=".35" r=".7">
+      <stop offset="0" stop-color="#ff4d6a"/><stop offset="1" stop-color="#7f0a1d"/>
+    </radialGradient>
+    <filter id="sh" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="14"/></filter>
+    <g id="bud">
+      <rect x="-14" y="-96" width="28" height="40" rx="10" fill="#2a2a2e"/>
+      <path d="M0 -70C52 -70 74 -30 74 6C74 52 40 76 0 76C-40 76 -70 46 -70 6C-70 -34 -48 -70 0 -70Z" fill="url(#shell)"/>
+      <path d="M0 -70C52 -70 74 -30 74 6C74 52 40 76 0 76C-40 76 -70 46 -70 6C-70 -34 -48 -70 0 -70Z" stroke="#ffffff" stroke-opacity=".18"/>
+      <circle cx="2" cy="6" r="38" fill="url(#face)"/>
+      <circle cx="2" cy="6" r="38" stroke="#0a0a0b" stroke-width="4"/>
+      <circle cx="2" cy="6" r="10" fill="#0a0a0b" opacity=".6"/>
+    </g>
+  </defs>
+  <ellipse cx="320" cy="400" rx="190" ry="16" fill="#000" opacity=".5" filter="url(#sh)"/>
+  <path d="M210 300C230 360 300 360 320 400M430 300C410 360 340 360 320 400V440" stroke="#2a2a2e" stroke-width="5" stroke-linecap="round"/>
+  <rect x="312" y="388" width="16" height="26" rx="4" fill="#3a3a40"/>
+  <use href="#bud" transform="translate(210 220) rotate(-18)"/>
+  <use href="#bud" transform="translate(430 220) rotate(18) scale(-1 1)"/>
+</svg>

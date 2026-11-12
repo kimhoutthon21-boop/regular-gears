@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Regular Gears — Keyboards, Mice & Gaming Gear in Cambodia</title>
+  <meta name="description"
+    content="Regular Gears — mechanical keyboards, gaming mice, mousepads and audio for Cambodian gamers, students and tech enthusiasts. Order in one message on Telegram or Facebook." />
+  <meta name="theme-color" content="#0a0a0b" />
+  <meta property="og:title" content="Regular Gears" />
+  <meta property="og:description"
+    content="Nothing regular about it. Keyboards, mice, mousepads and audio — delivered across Cambodia." />
+  <meta property="og:image" content="assets/logo-full.png" />
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap"
+    rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/styles.css" />
+
+  <!-- Data first, then app logic -->
+  <script src="js/products.js" defer></script>
+  <script src="js/topography.js" defer></script>
+  <script src="js/main.js" defer></script>
+</head>
+
+<body>
+  <!-- ===== Icon sprite ===== -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="logo" viewBox="0 0 562 624">
+      <path fill="currentColor" d="M0 0H543V160L323 350L562 624H390L218 436L0 624V448L383 132H135V270L0 381Z" />
+    </symbol>
+    <symbol id="i-search" viewBox="0 0 24 24">
+      <circle cx="11" cy="11" r="6.5" fill="none" stroke="currentColor" stroke-width="1.8" />
+      <path d="m16 16 4.5 4.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
+    </symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24">
+      <path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+        stroke-linejoin="round" />
+    </symbol>
+    <symbol id="i-arrow-ne" viewBox="0 0 24 24">
+      <path d="M7 17 17 7M9 7h8v8" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+        stroke-linejoin="round" />
+    </symbol>
+    <symbol id="i-close" viewBox="0 0 24 24">
+      <path d="M6 6l12 12M18 6 6 18" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
+    </symbol>
+    <symbol id="i-plus" viewBox="0 0 24 24">
+      <path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
+    </symbol>
+    <symbol id="i-minus" viewBox="0 0 24 24">
+      <path d="M5 12h14" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
+    </symbol>
+    <symbol id="i-check" viewBox="0 0 24 24">
+      <path d="m5 12.5 4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+        stroke-linejoin="round" />
+    </symbol>
+    <symbol id="i-telegram" viewBox="0 0 24 24">
+      <path fill="currentColor"
+        d="M21.5 4.2 2.9 11.4c-1.3.5-1.3 1.2-.2 1.6l4.8 1.5 1.8 5.6c.2.6.4.8.9.8.4 0 .6-.2.9-.4l2.3-2.2 4.7 3.5c.9.5 1.5.2 1.7-.8l3.1-14.6c.3-1.3-.5-1.9-1.4-1.2zM8.8 14.1l9.3-5.9c.4-.3.8-.1.5.2l-7.6 6.9-.3 3.3z" />
+    </symbol>
+    <symbol id="i-facebook" viewBox="0 0 24 24">
+      <path fill="currentColor"
+        d="M13.5 22v-8h2.7l.4-3.2h-3.1V8.8c0-.9.3-1.5 1.6-1.5h1.7V4.4c-.3 0-1.3-.1-2.5-.1-2.5 0-4.1 1.5-4.1 4.2v2.3H7.4V14h2.8v8z" />
+    </symbol>
+    <symbol id="i-messenger" viewBox="0 0 24 24">
+      <path fill="currentColor"
+        d="M12 2.5C6.6 2.5 2.5 6.4 2.5 11.6c0 2.7 1.1 5.1 3 6.7v3.2l3-1.7c1.1.3 2.2.5 3.5.5 5.4 0 9.5-3.9 9.5-9.1S17.4 2.5 12 2.5zm1 12.2-2.4-2.6-4.8 2.6 5.2-5.6 2.5 2.6 4.7-2.6z" />
+    </symbol>
+    <symbol id="i-tiktok" viewBox="0 0 24 24">
+      <path fill="currentColor"
+        d="M16.6 3c.3 2.3 1.8 3.9 4.1 4v3.1c-1.5.1-2.8-.4-4.1-1.2v5.8c0 3.6-2.6 6.3-6.2 6.3S4.2 18.3 4.2 15c0-3.6 3-6.2 6.7-5.8v3.2c-1.7-.4-3.4.7-3.4 2.6 0 1.6 1.3 2.8 2.9 2.8 1.7 0 3-1.2 3-3.3V3z" />
+    </symbol>
+    <symbol id="i-instagram" viewBox="0 0 24 24">
+      <rect x="3.5" y="3.5" width="17" height="17" rx="5" fill="none" stroke="currentColor" stroke-width="1.8" />
+      <circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.8" />
+      <circle cx="17.2" cy="6.8" r="1.1" fill="currentColor" />
+    </symbol>
+  </svg>
+
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- ===== 1. Navigation ===== -->
+  <header class="nav" id="nav">
+    <div class="nav__inner container">
+      <a href="#top" class="brand" aria-label="Regular Gears home">
+        <svg class="brand__mark" aria-hidden="true">
+          <use href="#logo" />
+        </svg>
+        <span class="brand__word">Regular<span>Gears</span></span>
+      </a>
+
+      <nav class="nav__links" aria-label="Primary">
+        <a href="#categories">Categories</a>
+        <a href="#shop">Shop</a>
+        <a href="#why">Why us</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <div class="nav__actions">
+        <button class="search-trigger" type="button" data-open-search aria-label="Search products">
+          <svg aria-hidden="true">
+            <use href="#i-search" />
+          </svg>
+          <span class="search-trigger__label">Search gear</span>
+          <kbd>/</kbd>
+        </button>
+        <a class="btn btn--accent btn--sm nav__cta" data-link="telegram" href="#" target="_blank" rel="noopener"><span
+            class="btn__mask"><span class="btn__text"><svg aria-hidden="true">
+                <use href="#i-telegram" />
+              </svg>Contact</span></span></a>
+        <button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false"
+          aria-controls="mobile-menu">
+          <span></span><span></span>
+        </button>
+      </div>
+    </div>
+
+    <div class="mobile-menu" id="mobile-menu" hidden>
+      <nav aria-label="Mobile">
+        <a href="#categories"><span>01</span>Categories</a>
+        <a href="#shop"><span>02</span>Shop</a>
+        <a href="#why"><span>03</span>Why us</a>
+        <a href="#about"><span>04</span>About</a>
+        <a href="#contact"><span>05</span>Contact</a>
+      </nav>
+      <div class="mobile-menu__foot">
+        <a class="btn btn--accent" data-link="telegram" href="#" target="_blank" rel="noopener"><span
+            class="btn__mask"><span class="btn__text"><svg aria-hidden="true">
+                <use href="#i-telegram" />
+              </svg>Telegram</span></span></a>
+        <a class="btn btn--ghost" data-link="facebook" href="#" target="_blank" rel="noopener"><span
+            class="btn__mask"><span class="btn__text"><svg aria-hidden="true">
+                <use href="#i-messenger" />
+              </svg>Messenger</span></span></a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- ===== 2. Hero ===== -->
+    <section class="hero" id="top">
+      <!-- Animated contour-line terrain (js/topography.js); falls back to the dot grid without WebGL2 -->
+      <div class="hero__topo" aria-hidden="true"></div>
+      <div class="hero__glow" aria-hidden="true"></div>
+      <div class="container">
+        <p class="eyebrow hero__eyebrow reveal">
+          <span class="dot"></span>Setup supply · Cambodia
+        </p>
+        <h1 class="hero__title reveal">
+          <span class="line">Nothing <em>regular</em></span>
+          <span class="line">about it.</span>
+        </h1>
+
+        <div class="hero__row">
+          <p class="hero__lead reveal">
+            Mechanical keyboards, precision mice, desk mats and audio. Hand-picked and tested for
+            Cambodian gamers, students and builders. Order in one message.
+          </p>
+          <div class="hero__ctas reveal">
+            <a href="#shop" class="btn btn--accent"><span class="btn__mask"><span class="btn__text">Shop the lineup<svg
+                    aria-hidden="true">
+                    <use href="#i-arrow" />
+                  </svg></span></span></a>
+            <a href="#" class="btn btn--ghost" data-link="telegram" target="_blank" rel="noopener"><span
+                class="btn__mask"><span class="btn__text"><svg aria-hidden="true">
+                    <use href="#i-telegram" />
+                  </svg>Chat on Telegram</span></span></a>
+          </div>
+        </div>
+
+        <!-- Interactive keyboard showcase (built by JS from a layout map) -->
+        <div class="stage reveal" aria-label="Interactive keyboard. Type on your keyboard to test it.">
+          <div class="stage__readout" aria-hidden="true">
+            <span class="stage__prompt">RG75&nbsp;›</span>
+            <span class="stage__typed" id="typed">type to test the switches</span><span class="caret"></span>
+          </div>
+          <div class="stage__scene">
+            <div class="kb" id="hero-kb"></div>
+          </div>
+          <ul class="stage__callouts" aria-hidden="true">
+            <li style="--x:14%;--y:18%">Gasket mount</li>
+            <li style="--x:84%;--y:10%">Rotary knob</li>
+            <li style="--x:90%;--y:78%">Hot-swap</li>
+            <li style="--x:8%;--y:84%">Tri-mode wireless</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="marquee" aria-hidden="true">
+        <!-- Write each item once; JS repeats them so the strip loops seamlessly at any screen width -->
+        <div class="marquee__track">
+          <span>Gasket mount</span><i></i><span>OLED display</span><i></i><span>42K DPI</span><i></i><span>40 g
+            shells</span><i></i>
+          <span>Tri-mode wireless</span><i></i><span>7.1 surround</span><i></i><span>Hot-swap</span><i></i><span>USB-C
+            mics</span><i></i>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 3. Categories ===== -->
+    <section class="section" id="categories">
+      <div class="container">
+        <header class="section__head">
+          <p class="eyebrow reveal"><span class="idx">01</span>Categories</p>
+          <h2 class="section__title reveal">Every part of<br />the setup.</h2>
+          <p class="section__lead reveal">Five categories, zero filler. If it's on our shelf, we'd use it ourselves.</p>
+        </header>
+        <div class="cat-grid" id="cat-grid"><!-- rendered by JS --></div>
+      </div>
+    </section>
+
+    <!-- ===== 4. Featured products ===== -->
+    <section class="section section--shop" id="shop">
+      <div class="container">
+        <header class="section__head section__head--row">
+          <div>
+            <p class="eyebrow reveal"><span class="idx">02</span>The lineup</p>
+            <h2 class="section__title reveal">The gear wall.</h2>
+          </div>
+          <label class="shop-search reveal">
+            <svg aria-hidden="true">
+              <use href="#i-search" />
+            </svg>
+            <span class="sr-only">Search products</span>
+            <input type="search" id="shop-search" placeholder="Search keyboards, mice, audio…" autocomplete="off" />
+          </label>
+        </header>
+
+        <div class="toolbar reveal">
+          <div class="chips" id="chips" role="tablist" aria-label="Filter by category"><!-- rendered by JS --></div>
+          <div class="sort">
+            <span aria-hidden="true">Sort</span>
+            <select id="sort" aria-label="Sort products">
+              <option value="featured">Featured</option>
+              <option value="price-asc">Price: low to high</option>
+              <option value="price-desc">Price: high to low</option>
+              <option value="name">Name</option>
+            </select>
+          </div>
+        </div>
+
+        <p class="result-count" id="result-count" aria-live="polite"></p>
+        <!-- One floating shelf per category, rendered by JS from js/products.js -->
+        <div class="wall" id="shelves"></div>
+
+        <div class="empty" id="empty" hidden>
+          <p class="empty__title" id="empty-title">No gear matches your search.</p>
+          <p>Can't find it? We source on request.</p>
+          <div class="empty__actions">
+            <button class="btn btn--ghost btn--sm" type="button" id="clear-filters"><span class="btn__mask"><span
+                  class="btn__text">Show all gear</span></span></button>
+            <a class="btn btn--accent btn--sm" data-link="telegram" data-request href="#" target="_blank"
+              rel="noopener"><span class="btn__mask"><span class="btn__text">Ask us to source it</span></span></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 5. Why choose us ===== -->
+    <section class="section section--why" id="why">
+      <div class="container">
+        <header class="section__head">
+          <p class="eyebrow reveal"><span class="idx">03</span>Why Regular Gears</p>
+          <h2 class="section__title reveal">Small shop.<br />Serious standards.</h2>
+        </header>
+
+        <div class="why-grid">
+          <article class="why reveal">
+            <span class="why__num">01</span>
+            <div class="why__icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48">
+                <rect x="6" y="14" width="36" height="22" rx="4" fill="none" stroke="currentColor" stroke-width="2" />
+                <path d="M12 21h4M20 21h4M28 21h4M14 28h20" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" />
+                <circle cx="38" cy="10" r="5" fill="var(--accent)" />
+              </svg>
+            </div>
+            <h3>Tested, not just resold</h3>
+            <p>Every keyboard gets typed on and every mouse sensor gets checked before it ships. You get gear that works
+              out of the box.</p>
+          </article>
+          <article class="why reveal">
+            <span class="why__num">02</span>
+            <div class="why__icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48">
+                <path d="M8 24 24 8h16v16L24 40Z" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linejoin="round" />
+                <circle cx="32" cy="16" r="3" fill="var(--accent)" />
+              </svg>
+            </div>
+            <h3>Fair, clear pricing</h3>
+            <p>Honest prices in USD with no hidden fees. Want something in a different budget? We'll say so straight.
+            </p>
+          </article>
+          <article class="why reveal">
+            <span class="why__num">03</span>
+            <div class="why__icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48">
+                <path d="M4 30h26V12H4zM30 18h8l6 7v5H30" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linejoin="round" />
+                <circle cx="12" cy="34" r="4" fill="var(--bg)" stroke="currentColor" stroke-width="2" />
+                <circle cx="36" cy="34" r="4" fill="var(--accent)" />
+              </svg>
+            </div>
+            <h3>Delivered across Cambodia</h3>
+            <p>Fast delivery in Phnom Penh and shipping to the provinces. Packed properly, so it arrives the way it
+              left.</p>
+          </article>
+          <article class="why reveal">
+            <span class="why__num">04</span>
+            <div class="why__icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48">
+                <path d="M8 12h32v20H22l-8 7v-7H8z" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linejoin="round" />
+                <circle cx="18" cy="22" r="2" fill="currentColor" />
+                <circle cx="24" cy="22" r="2" fill="currentColor" />
+                <circle cx="30" cy="22" r="2" fill="var(--accent)" />
+              </svg>
+            </div>
+            <h3>Advice from people who play</h3>
+            <p>Linear or tactile? Light or ergo? Message us. We use this gear every day and give you a real
+              recommendation, not a sales pitch.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 6. About ===== -->
+    <section class="section section--about" id="about">
+      <div class="container about">
+        <div class="about__visual reveal" aria-hidden="true">
+          <svg class="about__ring" viewBox="0 0 400 400">
+            <defs>
+              <path id="ring-path" d="M200 200m-160 0a160 160 0 1 1 320 0a160 160 0 1 1-320 0" />
+            </defs>
+            <text>
+              <textPath href="#ring-path" textLength="1000">REGULAR GEARS · SETUP SUPPLY · CAMBODIA · REGULAR GEARS ·
+                SETUP SUPPLY · CAMBODIA ·</textPath>
+            </text>
+          </svg>
+          <svg class="about__mark">
+            <use href="#logo" />
+          </svg>
+        </div>
+
+        <div class="about__copy">
+          <p class="eyebrow reveal"><span class="idx">04</span>About Regular Gears</p>
+          <h2 class="about__title reveal">Great gear shouldn't be hard to find in Cambodia.</h2>
+          <p class="reveal">
+            Regular Gears started with a simple frustration: the best keyboards, mice and headsets were always
+            out of stock, overpriced, or only available overseas. So we started bringing them in ourselves,
+            one carefully chosen product at a time.
+          </p>
+          <p class="reveal">
+            Today we supply students building their first desk setup, competitive players chasing every
+            millisecond, and enthusiasts who just love a good-sounding keyboard. Different people, same standard:
+            gear we would put on our own desks.
+          </p>
+          <ul class="about__facts reveal">
+            <li><span>Based in</span><strong data-store="location">Phnom Penh</strong></li>
+            <li><span>Open</span><strong data-store="hours">Daily</strong></li>
+            <li><span>Order via</span><strong>Telegram · Facebook</strong></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 7. Contact / CTA ===== -->
+    <section class="section section--cta" id="contact">
+      <div class="container">
+        <div class="cta">
+          <div class="cta__grid-bg" aria-hidden="true"></div>
+          <p class="eyebrow reveal"><span class="idx">05</span>Contact</p>
+          <h2 class="cta__title reveal">Your next setup<br />is one message away.</h2>
+          <p class="cta__lead reveal">Ask about stock, get a recommendation, or place an order. <span
+              data-store="responseTime">We reply fast</span>.</p>
+
+          <div class="cta__channels">
+            <div class="channel-3d reveal">
+            <a class="channel channel--tg" data-link="telegram" data-greeting href="#" target="_blank"
+              rel="noopener">
+              <span class="channel__top">
+                <span class="channel__icon"><svg aria-hidden="true">
+                    <use href="#i-telegram" />
+                  </svg></span>
+                <svg class="channel__arrow" aria-hidden="true">
+                  <use href="#i-arrow-ne" />
+                </svg>
+              </span>
+              <span class="channel__text">
+                <span class="channel__label">Telegram</span>
+                <span class="channel__handle" data-handle="telegram">@regulargears</span>
+              </span>
+            </a>
+            </div>
+            <div class="channel-3d reveal">
+            <a class="channel channel--fb" data-link="facebook" data-greeting href="#" target="_blank"
+              rel="noopener">
+              <span class="channel__top">
+                <span class="channel__icon"><svg aria-hidden="true">
+                    <use href="#i-messenger" />
+                  </svg></span>
+                <svg class="channel__arrow" aria-hidden="true">
+                  <use href="#i-arrow-ne" />
+                </svg>
+              </span>
+              <span class="channel__text">
+                <span class="channel__label">Messenger</span>
+                <span class="channel__handle" data-handle="facebook">Regular Gears on Messenger</span>
+              </span>
+            </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== 8. Footer ===== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__top">
+        <div class="footer__brand">
+          <a href="#top" class="brand" aria-label="Back to top">
+            <svg class="brand__mark" aria-hidden="true">
+              <use href="#logo" />
+            </svg>
+            <span class="brand__word">Regular<span>Gears</span></span>
+          </a>
+          <p>Keyboards, mice, mousepads and audio for Cambodia's gamers, students and builders.</p>
+          <div class="socials" id="socials">
+            <a href="#" data-social="facebook" aria-label="Facebook" target="_blank" rel="noopener"><svg>
+                <use href="#i-facebook" />
+              </svg></a>
+            <a href="#" data-social="telegram" aria-label="Telegram" target="_blank" rel="noopener"><svg>
+                <use href="#i-telegram" />
+              </svg></a>
+            <a href="#" data-social="tiktok" aria-label="TikTok" target="_blank" rel="noopener"><svg>
+                <use href="#i-tiktok" />
+              </svg></a>
+            <a href="#" data-social="instagram" aria-label="Instagram" target="_blank" rel="noopener"><svg>
+                <use href="#i-instagram" />
+              </svg></a>
+          </div>
+        </div>
+        <nav class="footer__col" aria-label="Shop">
+          <h4>Shop</h4>
+          <a href="#shop" data-filter="keyboards">Keyboards</a>
+          <a href="#shop" data-filter="mice">Mice</a>
+          <a href="#shop" data-filter="mousepads">Mousepads</a>
+          <a href="#shop" data-filter="audio">Audio</a>
+          <a href="#shop" data-filter="accessories">Accessories</a>
+        </nav>
+        <nav class="footer__col" aria-label="Company">
+          <h4>Company</h4>
+          <a href="#about">About</a>
+          <a href="#why">Why us</a>
+          <a href="#contact">Contact</a>
+        </nav>
+        <div class="footer__col">
+          <h4>Visit</h4>
+          <p data-store="location">Phnom Penh, Cambodia</p>
+          <p data-store="hours">Daily</p>
+        </div>
+      </div>
+
+      <div class="footer__word" aria-hidden="true">REGULAR GEARS</div>
+
+      <div class="footer__bottom">
+        <p>© <span id="year"></span> Regular Gears. All rights reserved.</p>
+        <a href="#top" class="to-top">Back to top <svg aria-hidden="true">
+            <use href="#i-arrow" />
+          </svg></a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===== Search palette ===== -->
+  <div class="palette" id="palette" hidden>
+    <div class="palette__backdrop" data-close-search></div>
+    <div class="palette__panel" role="dialog" aria-modal="true" aria-label="Search products">
+      <div class="palette__input">
+        <svg aria-hidden="true">
+          <use href="#i-search" />
+        </svg>
+        <input type="text" id="palette-input" placeholder="Search gear…" autocomplete="off" role="combobox"
+          aria-expanded="true" aria-controls="palette-results" aria-autocomplete="list" />
+        <kbd>Esc</kbd>
+      </div>
+      <ul class="palette__results" id="palette-results" role="listbox"></ul>
+      <div class="palette__foot"><span><kbd>↑</kbd><kbd>↓</kbd> navigate</span><span><kbd>↵</kbd> open</span></div>
+    </div>
+  </div>
+
+  <!-- ===== Order dialog ===== -->
+  <dialog class="order" id="order" aria-labelledby="order-name">
+    <button class="order__close" type="button" data-close-order aria-label="Close"><svg>
+        <use href="#i-close" />
+      </svg></button>
+    <div class="order__media"><img id="order-img" alt="" /></div>
+    <div class="order__body">
+      <p class="order__cat" id="order-cat"></p>
+      <h3 class="order__name" id="order-name"></h3>
+      <p class="order__desc" id="order-desc"></p>
+      <ul class="specs" id="order-specs"></ul>
+
+      <div class="order__row">
+        <div class="qty" aria-label="Quantity">
+          <button type="button" data-qty="-1" aria-label="Decrease quantity"><svg>
+              <use href="#i-minus" />
+            </svg></button>
+          <output id="order-qty" aria-live="polite">1</output>
+          <button type="button" data-qty="1" aria-label="Increase quantity"><svg>
+              <use href="#i-plus" />
+            </svg></button>
+        </div>
+        <div class="order__total"><span>Total</span><strong id="order-total"></strong></div>
+      </div>
+
+      <div class="order__actions">
+        <a class="btn btn--accent btn--block" id="order-tg" href="#" target="_blank" rel="noopener"><span
+            class="btn__mask"><span class="btn__text"><svg aria-hidden="true">
+                <use href="#i-telegram" />
+              </svg>Order on Telegram</span></span></a>
+        <a class="btn btn--ghost btn--block" id="order-fb" href="#" target="_blank" rel="noopener"><span
+            class="btn__mask"><span class="btn__text"><svg aria-hidden="true">
+                <use href="#i-messenger" />
+              </svg>Order on Messenger</span></span></a>
+      </div>
+      <p class="order__note">Your order message is copied automatically. If the chat opens empty, just paste and send.
+      </p>
+    </div>
+  </dialog>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"><svg aria-hidden="true">
+      <use href="#i-check" />
+    </svg><span></span></div>
+</body>
+
+</html>
